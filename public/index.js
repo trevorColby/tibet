@@ -41,7 +41,7 @@ var material = new THREE.MeshBasicMaterial();
 //allow real time background choice
 var skyBoxMaterial = new THREE.ShaderMaterial();
 var skyTextureLoader = new THREE.CubeTextureLoader();
-skyTextureLoader.setPath('tibet/public/media/' );
+skyTextureLoader.setPath('public/media/' );
 
 // var greenMat = new THREE.MeshPhongMaterial({ color: 0x39FF14 });
 
@@ -133,7 +133,7 @@ function init() {
 	if (resolution == 'high'){
 		 // url ='tibet/public/data/xyz_MetersHighRes.json'; //high res //github couldn't handle this
 	}else{
-		 url ='tibet/public/data/xyz_MetersLowResOptimized.json'; //low res
+		 url ='public/data/xyz_MetersLowResOptimized.json'; //low res
 	}
 
 	//use jquery ajax request to get json data
@@ -188,7 +188,7 @@ function init() {
 	}
 
 	//set our first texture for geometry 
-	texture = new THREE.TextureLoader().load( 'tibet/public/media/corona_imagery_300dpi.jpg' );	 //uncomment this one
+	texture = new THREE.TextureLoader().load( 'public/media/corona_imagery_300dpi.jpg' );	 //uncomment this one
 	texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping; //uncomment this one
 	
 	texture.minFilter = THREE.LinearFilter;
@@ -423,31 +423,31 @@ function updateTexture(textureChoice){
 		case '5':
 			material.color = new THREE.Color(1,1,1);
 			material.wireframe = false;
-			texture = new THREE.TextureLoader().load( 'tibet/public/media/tibetOverlay.png' );
+			texture = new THREE.TextureLoader().load( 'public/media/tibetOverlay.png' );
 			material.map = texture; //<---
 			break;
 		case '4':
 			material.color = new THREE.Color(1,1,1);
 			material.wireframe = false;
-			texture = new THREE.TextureLoader().load( 'tibet/public/media/corona_imagery_300dpi.jpg' );
+			texture = new THREE.TextureLoader().load( 'public/media/corona_imagery_300dpi.jpg' );
 			material.map = texture; //<---
 			break;
 		case '3':
 			material.color = new THREE.Color(1,1,1);
 			material.wireframe = false;
-			texture = new THREE.TextureLoader().load( 'tibet/public/media/tibetScreenshot.png' );
+			texture = new THREE.TextureLoader().load( 'public/media/tibetScreenshot.png' );
 			material.map = texture; //<---
 			break;
 		case '2': 
 			material.color = new THREE.Color(1,1,1);
 			material.wireframe = false;
-			texture = new THREE.TextureLoader().load( 'tibet/public/media/dem_as_image.jpg' );	
+			texture = new THREE.TextureLoader().load( 'public/media/dem_as_image.jpg' );	
 			material.map = texture; //<---
 			break;
 		case '1': 
 			material.color = new THREE.Color(1,1,1);
 			material.wireframe = false;
-			texture = new THREE.TextureLoader().load( 'tibet/public/media/matlabHoriz.jpg' ); 	
+			texture = new THREE.TextureLoader().load( 'public/media/matlabHoriz.jpg' ); 	
 			material.map = texture; 
 			break;
 		case '0':
